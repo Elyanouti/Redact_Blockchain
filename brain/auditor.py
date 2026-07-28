@@ -6,9 +6,21 @@ from openai import OpenAI
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+api_key = os.getenv("OPENAI_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+base_url = os.getenv("OPENAI_BASE_URL") or os.getenv("OPENROUTER_BASE_URL")
 
-MODEL = "gpt-4o"
+client_kwargs = {"api_key": api_key} if api_key else {}
+if base_url:
+    client_kwargs["base_url"] = base_url
+
+client = OpenAI(**client_kwargs) if client_kwargs else None
+
+if os.getenv("OPENAI_MODEL"):
+    MODEL = os.getenv("OPENAI_MODEL")
+elif base_url and "openrouter" in base_url.lower():
+    MODEL = "openai/gpt-4o-mini"
+else:
+    MODEL = "gpt-4o"
 
 PROMPT = """
 You are an AI specialized in privacy protection for legal contracts.
