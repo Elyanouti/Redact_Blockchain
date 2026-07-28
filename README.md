@@ -1,111 +1,82 @@
-# Redactable Contract
+# 🔏 Redactable Blockchain for Smart Contracts
 
-Redactable Contract هو تطبيق بسيط يساعد على رفع العقود والاطلاع على نصّها، ثم إزالة المعلومات الحساسة أو الشخصية باستخدام الذكاء الاصطناعي مع حفظ بنية العقد وتنسيقه قدر الإمكان.
+<div align="center">
 
-## ما الذي يقدمه التطبيق؟
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-red?logo=streamlit)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-black?logo=openai)
+![Blockchain](https://img.shields.io/badge/Blockchain-Chameleon%20Hash-success)
 
-- رفع ملفات العقود بصيغة PDF أو TXT
-- استخراج النص من الملف المرفوع
-- عرض النص في واجهة سهلة باستخدام Streamlit
-- استخدام الذكاء الاصطناعي لإزالة المعلومات الحساسة مثل:
-  - الأسماء
-  - العناوين
-  - البريد الإلكتروني
-  - أرقام الهواتف
-  - أرقام الهوية
-  - البيانات المالية
-- حفظ التغييرات على مستوى النص مع التحقق من التغييرات عبر blockchain
+**AI-powered redactable blockchain for secure contract management.**
 
-## التقنيات المستخدمة
+</div>
+
+---
+
+## 📖 Overview
+
+This project combines **Artificial Intelligence** and **Chameleon Hash-based Redactable Blockchain** to enable authorized modifications of legal contracts while preserving blockchain integrity. It supports automatic detection of sensitive information, secure redaction, manual editing, and cryptographic verification after every modification.
+
+---
+
+## ✨ Features
+
+- 📄 Upload PDF & TXT contracts
+- 🤖 AI contract analysis
+- 🔍 Sensitive data detection
+- 🧹 AI & selective redaction
+- ✍️ Manual editing
+- 🔐 Chameleon Hash verification
+- 📜 Audit Log
+- ✅ Blockchain integrity validation
+
+---
+
+## 🖼️ Preview
+
+### Main Interface
+
+<p align="center">
+<img src="images/interface.png" width="850">
+</p>
+
+### Hash Verification
+
+<p align="center">
+<img src="images/hash_verification.png" width="850">
+</p>
+
+---
+
+## 🛠️ Tech Stack
 
 - Python
 - Streamlit
 - OpenAI API
 - PyCryptodome
-- PyPDF2 / pdfplumber
-- python-dotenv
+- PyPDF2
+- pdfplumber
 
-## بنية المشروع
+---
 
-```text
-redactable/
-├── app.py
-├── requirements.txt
-├── .env
-├── brain/
-│   ├── auditor.py
-│   └── privacy.py
-├── core/
-│   ├── blockchain.py
-│   ├── crypto_engine.py
-│   ├── ocr.py
-│   └── trapdoor_init.py
-├── services/
-│   └── contract_service.py
-└── utils/
-    └── session.py
-```
-
-## المتطلبات
-
-تأكد من أن Python 3.8+ مثبت على جهازك.
-
-## التثبيت
-
-1. أنشئ بيئة افتراضية:
+## 🚀 Installation
 
 ```bash
+git clone https://github.com/your-username/Redact_Blockchain.git
+cd Redact_Blockchain
+
 python -m venv .venv
-```
-
-2. فعّل البيئة الافتراضية:
-
-- Windows:
-
-```bash
 .venv\Scripts\activate
-```
 
-- Linux/macOS:
-
-```bash
-source .venv/bin/activate
-```
-
-3. ثبّت المكتبات المطلوبة:
-
-```bash
 pip install -r requirements.txt
+
+streamlit run interface.py
 ```
 
-4. أنشئ ملف `.env` وأضف مفتاح OpenAI:
+---
 
-```env
-OPENAI_API_KEY=your_api_key_here
-```
+## 👨‍💻 Author
 
-## التشغيل
+**Abdelouadoud Elyanouti**
 
-شغّل التطبيق باستخدام:
-
-```bash
-streamlit run app.py
-```
-
-## الاستخدام
-
-1. افتح التطبيق في المتصفح.
-2. ارفع عقدًا بصيغة PDF أو TXT.
-3. راجع النص المستخرج.
-4. استخدم زر "Remove Sensitive Information (AI)" لإزالة المعلومات الحساسة.
-5. احفظ التعديلات إذا رغبت في ذلك.
-
-## ملاحظات مهمة
-
-- لا تقم بمشاركة مفتاح OpenAI أو أي بيانات حساسة في GitHub.
-- يُفضّل إضافة ملف `.env` إلى `.gitignore`.
-- بعض الملفات مثل `__pycache__` وملفات `.pyc` لا يجب تضمينها في المستودع.
-
-## الترخيص
-
-هذا المشروع مخصص للاستخدام التعليمي والتجريبي.
+Master's Student in Artificial Intelligence
