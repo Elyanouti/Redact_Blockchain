@@ -1,0 +1,7 @@
+openai
+pycryptodome
+streamlit
+python-dotenv
+watchdog
+PyPDF2
+pdfplumber
