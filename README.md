@@ -15,7 +15,7 @@
 
 ## 📖 Overview
 
-This project combines **Artificial Intelligence** and **Chameleon Hash-based Redactable Blockchain** to enable authorized modifications of legal contracts while preserving blockchain integrity. It supports automatic detection of sensitive information, secure redaction, manual editing, and cryptographic verification after every modification.
+This project combines **Artificial Intelligence** with a **Chameleon Hash-based Redactable Blockchain** to enable authorized modifications of legal contracts while preserving blockchain integrity. It supports automatic detection of sensitive information, AI-assisted and manual redaction, and cryptographic verification after every modification.
 
 ---
 
@@ -48,6 +48,28 @@ This project combines **Artificial Intelligence** and **Chameleon Hash-based Red
 
 ---
 
+## 📁 Project Structure
+
+```text
+Redact_Blockchain/
+├── app.py
+├── requirements.txt
+├── README.md
+├── brain/
+│   └── auditor.py
+├── core/
+│   ├── crypto_engine.py
+│   └── trapdoor_init.py
+├── services/
+├── utils/
+├── images/
+│   ├── interface.png
+│   └── hash_verification.png
+└── data/
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - Python
@@ -70,7 +92,7 @@ python -m venv .venv
 
 pip install -r requirements.txt
 
-streamlit run interface.py
+streamlit run app.py
 ```
 
 ---
